@@ -1,78 +1,127 @@
-*{
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box; /* Ensure consistent padding and border treatment */
 }
-body{
+
+body {
     display: flex;
     justify-content: center;
-    align-content: center;
-    margin-top: 22vh;
+    align-items: center; /* Fix alignment vertically */
+    min-height: 100vh; /* Ensure body takes full viewport height */
     background-color: #222;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     font-family: 'Poppins', sans-serif;
-    font-family: 'Quicksand', sans-serif;
-    /* background-image: url(https://source.unsplash.com/1600x900/?pune); */
     font-size: 90%;
+    color: white;
 }
-.main-card{
-    background: #000000d0;
+
+.main-card {
+    background: rgba(0, 0, 0, 0.8); /* Improve background transparency */
     color: white;
     padding: 2em;
-    border-radius:30px;
-    /* box-shadow: 8px; */
+    border-radius: 30px;
     width: 100%;
     max-width: 500px;
-    height: 85%;
-    /* margin: 1em; */
+    margin: 1em; /* Add margin for small screens */
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.5); /* Add subtle shadow for better depth */
 }
-.search{
-    display: flex;   
-    align-content: center;
-    justify-content: center;
+
+.search {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Spread input and button nicely */
+    gap: 0.5em; /* Add gap between elements */
 }
-button:hover{
-    background: #7c7c7c6b;
-    /* background: white; */
+
+button:hover {
+    background: rgba(124, 124, 124, 0.8); /* Add better hover effect */
+    transform: scale(1.1); /* Subtle zoom on hover */
 }
+
 button {
-    margin: 0.5em;
     border-radius: 50%;
     border: none;
-    outline: none;
     width: 46px;
     height: 46px;
-    background: #7c7c7c2b;
+    background: rgba(124, 124, 124, 0.3);
     color: white;
     cursor: pointer;
     transition: 0.2s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .search-bar {
     border: none;
     outline: none;
     border-radius: 23px;
-    padding: 0.4rem 1rem;
-    background: #7c7c7c2b;
+    padding: 0.5rem 1rem;
+    background: rgba(124, 124, 124, 0.3);
     color: white;
     font-family: inherit;
-    font-size: 120%;
-    width: 80%;
+    font-size: 1.2rem;
+    width: 100%;
 }
-.city{
+
+.city {
     margin-top: 15px;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 600;
 }
-.temp{
-    margin: 5px;
+
+.temp {
+    margin: 5px 0;
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
 }
-#info{
+
+.info {
     padding: 3px;
     font-weight: 500;
+    margin: 5px 0; /* Add spacing between info elements */
+    text-align: center;
 }
-.desc_img{
+
+.desc_img {
     margin-top: 20px;
     display: flex;
-    align-content: center;
-    padding-right: 10rem;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem; /* Add space between temperature and icon */
 }
-.desc{
+
+.icon {
+    width: 64px;
+    height: 64px;
+}
+
+.desc {
     text-transform: capitalize;
+    font-size: 1rem;
+    margin-top: 0.5em;
+}
+
+@media (max-width: 600px) {
+    .main-card {
+        padding: 1.5em;
+    }
+
+    .search-bar {
+        font-size: 1rem;
+    }
+
+    .temp {
+        font-size: 1.5rem;
+    }
+
+    .desc_img {
+        flex-direction: column; /* Stack temperature and icon on smaller screens */
+        gap: 0.5rem;
+    }
 }
