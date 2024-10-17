@@ -1,5 +1,5 @@
 const weatherApiKey = "844774d741694d3581983113232712"; // Weather API key
-const pixabayApiKey = "46577132-ff46dc47dfbf2ba7729377854"; // Replace with your Pixabay API key
+const pixabayApiKey = "46577132-ff46dc47dfbf2ba7729377854"; //key
 
 const body = document.querySelector("body");
 let search = document.querySelector(".search-bar");
