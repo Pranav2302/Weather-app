@@ -4,39 +4,57 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WeatherApp</title>
+    
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&family=Quicksand:wght@500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&family=Quicksand:wght@500&display=swap" rel="stylesheet">
+
+    <!-- Stylesheets -->
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="favicon.jpeg" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
-<body background="https://source.unsplash.com/1600x900?nature" class="background">
-    <!-- <img src="" class="background"/> -->
+<body class="background">
+
     <main>
         <div class="main-card">
-            
+            <!-- Search Section -->
             <div class="search">
-                <input type="text" class="search-bar" placeholder="Search City">
-                <button>
+                <input 
+                    type="text" 
+                    class="search-bar" 
+                    placeholder="Search City" 
+                    aria-label="Search City"
+                >
+                <button aria-label="Search">
                     <i class="fa-solid fa-magnifying-glass"></i>
                 </button>
             </div>
+
+            <!-- Weather Information -->
             <div class="weather">
                 <h1 class="city">Search Weather</h1>
+
                 <div hidden id="hide">
-                <div class="desc_img">
-                <h1 class="temp">31°C</h1>
-                <img src="https://cdn.weatherapi.com/weather/64x64/day/113.png" alt="icon" class="icon"/>
+                    <div class="desc_img">
+                        <h1 class="temp">31°C</h1>
+                        <img 
+                            src="https://cdn.weatherapi.com/weather/64x64/day/113.png" 
+                            alt="Weather Icon" 
+                            class="icon"
+                        />
+                    </div>
+
+                    <div class="desc info">Cloudy</div>
+                    <div class="humidity info">Humidity: 60%</div>
+                    <div class="wind info">Wind speed: 6.2 km/h</div>
+                    <div class="time info">Date And Time:</div>
                 </div>
-                <div class="desc" id="info">Cloudy</div>
-                <div class="humidity"id="info">Humidity: 60%</div>
-                <div class="wind"id="info">Wind speed: 6.2 km/h</div>
-                <div class="time"id="info">Date And Time:</div>
-            </div>
             </div>
         </div>
     </main>
+
     <script src="app.js"></script>
 </body>
 </html>
